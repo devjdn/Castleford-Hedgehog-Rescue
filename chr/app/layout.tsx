@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter_Tight({subsets: ["latin"]});
+
 
 export const metadata: Metadata = {
   title: "Castleford Hedgehog Rescue",
