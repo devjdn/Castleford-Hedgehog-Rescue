@@ -22,8 +22,8 @@
 }
 h1 {
   line-height: 1.15em;
-  font-weight: 800;
-  font-size: 2.5em;
+  font-weight: 900;
+  font-size: 3.25em;
   color: var(--primary-text);
 }
 
@@ -51,8 +51,9 @@ body {
 header.global-header {
   background: #fefefe;
   display: grid;
-  border-bottom: 2px solid var(--secondary-branding);
+  border-bottom: 1px solid var(--secondary-branding);
   padding: 0 20px;
+  z-index: 250;
 }
 
 main {
@@ -62,27 +63,30 @@ main {
 .section-content {
   margin-inline: auto;
   max-width: 1680px;
-  padding-inline: 20px;
+  padding: 2.5vw;
+  gap: 2.5vw;
 }
 
-section.hero .section-content {
+/*section{
+  border-radius: 2.5vw;
+  margin: 2.5vw;
+}*/
+section.hero {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 100px 0;
 }
-section.hero .donation-portal {
-  width: 600px;
-  height: 600px;
-  background: var(--secondary-branding);
-  border-radius: 20px;
-  padding: 40px;
-}
-section.hero .donation-portal h1 {
-  color: var(--primary-branding);
-  text-align: center;
+section.hero .hero-overlay {
+  grid-area: 1/1/2/3;
+  place-self: center;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to bottom, rgba(18, 18, 18, 0.5098039216), #121212);
+  z-index: 2;
+  height: 100%;
+  width: 100%;
 }
 section.hero img {
-  grid-area: 1/2/2/3;
+  grid-area: 1/1/2/3;
   width: 100%;
   height: 500px;
   -o-object-fit: cover;
@@ -92,33 +96,41 @@ section.hero img {
   z-index: 1;
 }
 
-section.donate {
-  background: var(--secondary-branding);
-  padding: 120px 40px;
+section.action {
+  background: #121212;
+  text-align: center;
+}
+section.action h2, section.action p {
+  color: var(--primary-branding);
+}
+section.action h2 {
+  line-height: 1.15em;
+}
+section.action hr {
+  border-top: 5px solid var(--primary-branding);
+  width: 50px;
+}
+section.action .section-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+section.action .section-content > * {
+  padding: 120px 2.5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
+  border-radius: 20px;
+  background: var(--secondary-branding);
 }
-section.donate .donation-info {
+section.action .donate .donation-info {
   max-width: 700px;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
-section.donate .donation-info h2 {
-  line-height: 1.15em;
-}
-section.donate .donation-info hr {
-  border-top: 5px solid var(--primary-branding);
-  width: 50px;
-}
-section.donate .donation-info h2, section.donate .donation-info p {
-  color: var(--primary-branding);
-}
-section.donate .donation-link button {
+section.action .donate .donation-link button {
   display: flex;
   gap: 8px;
   background: var(--primary-branding);
@@ -128,20 +140,27 @@ section.donate .donation-link button {
   border-radius: 14px;
   width: 200px;
 }
-section.donate .donation-link button svg, section.donate .donation-link button p {
+section.action .donate .donation-link button svg, section.action .donate .donation-link button p {
   color: var(--secondary-branding);
   stroke: var(--secondary-branding);
   font-weight: 700;
 }
+section.action .report .report-info {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
 section.mission {
-  padding: 120px 20px;
   background: #fffadb;
 }
 section.mission .section-content {
   display: grid;
   grid-template-columns: 1fr 1.6fr;
   gap: 80px;
+  padding: 120px 2.5vw;
 }
 section.mission .mission-info {
   max-width: 600px;
@@ -165,22 +184,31 @@ section.mission img {
 }
 
 @media screen and (max-width: 1068px) {
-  section.donate {
-    padding: 40px;
+  h2 {
+    font-size: 1.75em;
   }
-  section.mission {
-    padding: 40px 20px;
+  .section-content {
+    padding: 2.5vw;
   }
-  section.mission {
-    text-align: center;
+  section.action .section-content {
+    display: flex;
+    flex-direction: column;
+  }
+  section.action .section-content > * {
+    padding: 40px 2.5vw;
   }
   section.mission .section-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 60px 2.5vw;
   }
   section.mission .mission-info {
     align-items: center;
+    text-align: center;
+  }
+  section.mission .mission-info p {
+    font-size: 0.95em;
   }
 }
 @layer utilities {
