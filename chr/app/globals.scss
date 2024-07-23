@@ -97,26 +97,111 @@ section.hero{
   }
 }
 
+section.donate{
+  background: var(--secondary-branding);
+  padding: 120px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+
+  .donation-info{
+    max-width: 700px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    h2{
+      line-height: 1.15em;
+    }
+
+    hr{
+      border-top: 5px solid var(--primary-branding);
+      width: 50px;
+    }
+
+    h2,p{
+      color: var(--primary-branding);
+    }
+  }
+
+  .donation-link{
+    button{
+      display: flex;
+      gap: 8px;
+      background: var(--primary-branding);
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 14px;
+      width: 200px;
+      
+      svg,p{
+        color: var(--secondary-branding);
+        stroke: var(--secondary-branding);
+        font-weight: 700;
+      }
+    }
+  }
+}
+
 section.mission{
   padding: 120px 20px;
-  text-align: center;
   background: #fffadb;
 
   .section-content{
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 80px;
+  }
+
+  .mission-info{
     max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
+
+    hr{
+      border-top: 5px solid var(--secondary-branding);
+      width: 50px;
+    }
+    p{
+      font-size: 1.1em;
+      // font-weight: 500;
+    }
+
   }
-  
-  hr{
-    border-top: 5px solid var(--secondary-branding);
-    width: 50px;
+
+  img{
+    border-radius: 20px;
+    // // width: 800px;
+    // aspect-ratio: 16/10;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  p{
-    font-size: 1.1em;
-    // font-weight: 500;
+
+}
+
+@media screen and (max-width: 1068px){
+  section.donate{
+    padding: 40px;
+  }
+  section.mission{
+    padding: 40px 20px;
+  }
+  section.mission{
+    text-align: center;
+    .section-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .mission-info{
+      align-items: center;      
+    }
   }
 }
 

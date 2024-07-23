@@ -92,26 +92,97 @@ section.hero img {
   z-index: 1;
 }
 
+section.donate {
+  background: var(--secondary-branding);
+  padding: 120px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+section.donate .donation-info {
+  max-width: 700px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+section.donate .donation-info h2 {
+  line-height: 1.15em;
+}
+section.donate .donation-info hr {
+  border-top: 5px solid var(--primary-branding);
+  width: 50px;
+}
+section.donate .donation-info h2, section.donate .donation-info p {
+  color: var(--primary-branding);
+}
+section.donate .donation-link button {
+  display: flex;
+  gap: 8px;
+  background: var(--primary-branding);
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 14px;
+  width: 200px;
+}
+section.donate .donation-link button svg, section.donate .donation-link button p {
+  color: var(--secondary-branding);
+  stroke: var(--secondary-branding);
+  font-weight: 700;
+}
+
 section.mission {
   padding: 120px 20px;
-  text-align: center;
   background: #fffadb;
 }
 section.mission .section-content {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 80px;
+}
+section.mission .mission-info {
   max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center;
 }
-section.mission hr {
+section.mission .mission-info hr {
   border-top: 5px solid var(--secondary-branding);
   width: 50px;
 }
-section.mission p {
+section.mission .mission-info p {
   font-size: 1.1em;
 }
+section.mission img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
+@media screen and (max-width: 1068px) {
+  section.donate {
+    padding: 40px;
+  }
+  section.mission {
+    padding: 40px 20px;
+  }
+  section.mission {
+    text-align: center;
+  }
+  section.mission .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section.mission .mission-info {
+    align-items: center;
+  }
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
