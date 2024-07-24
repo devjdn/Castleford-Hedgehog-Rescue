@@ -10,15 +10,36 @@ export default function Home() {
     <main>
       <section className="hero">
         <div className="hero-overlay">
+          <div className="hero-text">
+            <h1>Castleford Hedgehog Rescue</h1>
+            <h3>Every wild animal deserves a chance to survive.</h3>
+          </div>
         </div>
         <Image src={HomeHero} alt="Hero image of a hedgehog"/>
       </section>
+      
+      <section className="mission">
+        <div className="section-content">
+          {/* <Image src={LeftHedgehog} alt="Image of a hedgehog curled up in a person's hand"/> */}
+          <div className="mission-info">
+            <h2>Our mission</h2>
+            {/* <hr/> */}
+            <p>
+              At Castleford Hedgehog Rescue, our mission is rooted in compassion and dedication to protecting one of Britain&apos;s most beloved and vulnerable creatures. We provide sanctuary for injured, orphaned, and sick hedgehogs, offering them the medical care and rehabilitation they need to recover and thrive. Our work begins with rescuing these animals from dangerous situations, ensuring they receive the appropriate medical treatment, nutrition, and a safe environment to heal. Our ultimate goal is to rehabilitate these hedgehogs and release them back into the wild, where they can contribute to the local ecosystem.
+            </p>
+            <p>
+              Beyond direct rescue and rehabilitation, our mission extends to education and community involvement. We believe public awareness is crucial for the long-term survival of hedgehogs in our region. Through workshops, school programs, and community events, we educate the public about the importance of hedgehog conservation, the challenges these animals face, and how individuals can make a difference. By fostering a community that values and protects hedgehogs, we aim to create a safer environment for these creatures and ensure that future generations can continue to enjoy their presence in our gardens and countryside.
+            </p>
+          </div>
+          <Image src={RightHedgehog} alt="Image of a hedgehog peaking through some bushes"/>
+        </div>
+      </section>
+
       <section className="action">
         <div className="section-content">
           <div className="donate">
             <div className="donation-info">
               <h2>Make a donation</h2>
-              <hr/>
               <p>No matter the amount you donate, it is appreciated more than you will ever know. Each donation plays a vital step in stabilising the hedgehog population, and giving them another chance at life.</p>
             </div>
             <div className="donation-link">
@@ -35,26 +56,9 @@ export default function Home() {
           <div className="report">
             <div className="report-info">
               <h2>Make a report</h2>
-              <hr/>
               <p>If you have information on a hedgehog that may need help in the Yorkshire region, please submit a report here. You can also make a report to us via our social media accounts.</p>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="mission">
-        <div className="section-content">
-          {/* <Image src={LeftHedgehog} alt="Image of a hedgehog curled up in a person's hand"/> */}
-          <div className="mission-info">
-            <h2>Our mission</h2>
-            <hr/>
-            <p>
-              At Castleford Hedgehog Rescue, our mission is rooted in compassion and dedication to protecting one of Britain&apos;s most beloved and vulnerable creatures. We provide sanctuary for injured, orphaned, and sick hedgehogs, offering them the medical care and rehabilitation they need to recover and thrive. Our work begins with rescuing these animals from dangerous situations, ensuring they receive the appropriate medical treatment, nutrition, and a safe environment to heal. Our ultimate goal is to rehabilitate these hedgehogs and release them back into the wild, where they can contribute to the local ecosystem.
-            </p>
-            <p>
-              Beyond direct rescue and rehabilitation, our mission extends to education and community involvement. We believe public awareness is crucial for the long-term survival of hedgehogs in our region. Through workshops, school programs, and community events, we educate the public about the importance of hedgehog conservation, the challenges these animals face, and how individuals can make a difference. By fostering a community that values and protects hedgehogs, we aim to create a safer environment for these creatures and ensure that future generations can continue to enjoy their presence in our gardens and countryside.
-            </p>
-          </div>
-          <Image src={RightHedgehog} alt="Image of a hedgehog peaking through some bushes"/>
         </div>
       </section>
     </main>

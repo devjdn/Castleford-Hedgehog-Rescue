@@ -22,7 +22,7 @@
 }
 h1 {
   line-height: 1.15em;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 3.25em;
   color: var(--primary-text);
 }
@@ -41,6 +41,7 @@ h3 {
 
 p {
   color: var(--secondary-text);
+  font-weight: 500;
 }
 
 body {
@@ -51,7 +52,6 @@ body {
 header.global-header {
   background: #fefefe;
   display: grid;
-  border-bottom: 1px solid var(--secondary-branding);
   padding: 0 20px;
   z-index: 250;
 }
@@ -62,15 +62,11 @@ main {
 
 .section-content {
   margin-inline: auto;
-  max-width: 1680px;
+  max-width: 1440px;
   padding: 2.5vw;
   gap: 2.5vw;
 }
 
-/*section{
-  border-radius: 2.5vw;
-  margin: 2.5vw;
-}*/
 section.hero {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -79,11 +75,21 @@ section.hero .hero-overlay {
   grid-area: 1/1/2/3;
   place-self: center;
   display: grid;
-  place-items: center;
-  background: linear-gradient(to bottom, rgba(18, 18, 18, 0.5098039216), #121212);
+  place-items: center left;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.1921568627), rgba(0, 0, 0, 0.8431372549));
   z-index: 2;
   height: 100%;
   width: 100%;
+}
+section.hero .hero-overlay .hero-text {
+  max-width: 600px;
+  padding: 2.5vw;
+}
+section.hero .hero-overlay .hero-text h1 {
+  color: #fff;
+}
+section.hero .hero-overlay .hero-text h3 {
+  color: #ebebeb;
 }
 section.hero img {
   grid-area: 1/1/2/3;
@@ -94,6 +100,7 @@ section.hero img {
   -o-object-position: 30% 50%;
      object-position: 30% 50%;
   z-index: 1;
+  transform: scaleX(-1);
 }
 
 section.action {
@@ -115,7 +122,7 @@ section.action .section-content {
   grid-template-columns: repeat(2, 1fr);
 }
 section.action .section-content > * {
-  padding: 120px 2.5vw;
+  padding: 80px 2.5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -153,24 +160,17 @@ section.action .report .report-info {
   gap: 20px;
 }
 
-section.mission {
-  background: #fffadb;
-}
 section.mission .section-content {
   display: grid;
-  grid-template-columns: 1fr 1.6fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 80px;
-  padding: 120px 2.5vw;
+  padding: 80px 2.5vw;
 }
 section.mission .mission-info {
   max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-section.mission .mission-info hr {
-  border-top: 5px solid var(--secondary-branding);
-  width: 50px;
 }
 section.mission .mission-info p {
   font-size: 1.1em;
@@ -183,7 +183,7 @@ section.mission img {
      object-fit: cover;
 }
 
-@media screen and (max-width: 1068px) {
+@media screen and (max-width: 960px) {
   h2 {
     font-size: 1.75em;
   }

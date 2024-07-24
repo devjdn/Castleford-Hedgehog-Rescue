@@ -26,13 +26,14 @@
 
 h1{
   line-height: 1.15em;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 3.25em;
   color: var(--primary-text);
 }
 h2{
   font-weight: 600;
   font-size: 2.5em;
+  // font-family: roboto-serif;
   color: var(--primary-text);
 }
 h3{
@@ -42,6 +43,7 @@ h3{
 }
 p{
   color: var(--secondary-text);
+  font-weight: 500;
 }
 
 body{
@@ -52,7 +54,7 @@ body{
 header.global-header{
   background: #fefefe;
   display: grid;
-  border-bottom: 1px solid var(--secondary-branding);
+  // border-bottom: 1px solid var(--secondary-branding);
   padding: 0 20px;
   // position: sticky;
 //   top: 0;
@@ -65,15 +67,10 @@ main{
 
 .section-content{
   margin-inline: auto;
-  max-width: 1680px;
+  max-width: 1440px;
   padding: 2.5vw;
   gap: 2.5vw;
 }
-
-/*section{
-  border-radius: 2.5vw;
-  margin: 2.5vw;
-}*/
 
 section.hero{
   display: grid;
@@ -83,11 +80,23 @@ section.hero{
     grid-area: 1/1/2/3;
     place-self: center;
     display: grid;
-    place-items: center;
-    background: linear-gradient(to bottom, #12121282, #121212);
+    place-items: center left;
+    background: linear-gradient(to left, #00000031, #000000d7);
     z-index: 2;
     height: 100%;
     width: 100%;
+
+    .hero-text{
+      max-width: 600px;
+      padding: 2.5vw;
+
+      h1{
+        color: #fff;
+      }
+      h3{
+        color: #ebebeb;
+      }
+    }
   }
 
   img{
@@ -97,6 +106,7 @@ section.hero{
     object-fit: cover;
     object-position: 30% 50%;
     z-index: 1;
+    transform: scaleX(-1);
   }
 }
 
@@ -120,7 +130,7 @@ section.action{
     grid-template-columns: repeat(2,1fr);
 
     >*{
-      padding: 120px 2.5vw;
+      padding: 80px 2.5vw;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -177,13 +187,12 @@ section.action{
 }
 
 section.mission{
-  background: #fffadb;
 
   .section-content{
     display: grid;
-    grid-template-columns: 1fr 1.6fr;
+    grid-template-columns: repeat(2,1fr);
     gap: 80px;
-    padding: 120px 2.5vw;
+    padding: 80px 2.5vw;
   }
 
   .mission-info{
@@ -192,10 +201,6 @@ section.mission{
     flex-direction: column;
     gap: 20px;
 
-    hr{
-      border-top: 5px solid var(--secondary-branding);
-      width: 50px;
-    }
     p{
       font-size: 1.1em;
     }
@@ -211,7 +216,7 @@ section.mission{
 
 }
 
-@media screen and (max-width: 1068px){
+@media screen and (max-width: 960px){
 
   h2{
     font-size: 1.75em;
