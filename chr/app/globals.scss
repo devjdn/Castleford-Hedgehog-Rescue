@@ -32,6 +32,7 @@ h1{
 }
 h2{
   font-weight: 600;
+  line-height: 1.15em;
   font-size: 1.8em;
   color: var(--primary-text);
 }
@@ -46,7 +47,6 @@ p{
 }
 
 body{
-  background: #040404;
   min-height: 100vh;
 }
 
@@ -77,7 +77,7 @@ main{
 .section-content{
   margin-inline: auto;
   max-width: 87.5vw;
-  padding: 2.5vw;
+  padding: 80px 10px;
   gap: 2.5vw;
 }
 
@@ -194,13 +194,23 @@ section.intro{
 
 
 section.mission{
+  // background: linear-gradient(to right, #00000050, #000, #00000050), linear-gradient(to bottom, #000 calc(100% - 48px), #00000050), linear-gradient(to right, var(--primary-branding), #12df73);
+  background: #000;
 
   .section-content{
     gap: 80px;
-    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 108px;
   }
 
-  .mission-info{
+  hr{
+    border-top: 2px solid #383838;
+    width: 200px;
+    margin-inline: auto;
+  }
+
+  .info{
     max-width: 600px;
     margin-inline: auto;
     display: flex;
@@ -209,11 +219,12 @@ section.mission{
     gap: 20px;
 
     h2{
-      font-size: clamp(1.95em, 3.5vw, 2.5em);
+      font-size: clamp(2.1em, 3.5vw, 2.5em);
       background: linear-gradient(125deg, var(--primary-branding), #12df73);
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
     p{
       font-size: clamp(1.1em, 3.5vw, 1.3em);
       font-weight: 600;
@@ -231,35 +242,34 @@ section.mission{
 
 }
 
-section.more-info{
-  .question-cards{
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.divider{
+  padding: 60px 10px;
+  padding-top: 0;
+  background: #49d334;
+  position: relative;
+  width: 100%;
+  
+  img{
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 0%);
+    width: 75vw;
+    max-width: 750px;
     margin-inline: auto;
-  }
-
-  .question{
-    background: #141414;
     border-radius: 20px;
-    padding: 30px;
-
-    h2{
-      color: #dedede;
-      margin-bottom: 20px;
-      line-height: 1.15em;
-    }
-    p{
-      color: #bcbcbc;
-    }
   }
+}
+
+section.social-media{
+
 }
 
 @media screen and (max-width: 868px){
 
-  
   .section-content{
-    padding: 2.5vw;
+    padding: 60px 10px;
   }
 
 
@@ -271,19 +281,10 @@ section.more-info{
     }
   }
 
-  section.mission{
-
-    .section-content{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 60px 2.5vw;
-    }
-    .mission-info{
-      align-items: center;
-      text-align: center;
-    }
+  .map-overlap{
+    width: 87.5vw;
   }
+
 }
 
 

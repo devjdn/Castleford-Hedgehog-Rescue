@@ -3,7 +3,7 @@ import Script from "next/script";
 import HomeHero from "@/branding/hedgehog-hero.jpg"
 import LeftHedgehog from "@/branding/hedgehog-side-1.jpeg";
 import RightHedgehog from "@/branding/hedgehog-side-2.jpg";
-import { MoveDown } from "lucide-react";
+import YorkshireMap from "@/branding/yorkshire-map.png";
 
 export default function Home() {
   return (
@@ -68,34 +68,25 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="divider"></div>
       <section className="mission">
         <div className="section-content">
-          <div className="mission-info">
+          <div className="mission-info info">
             <h2>Our mission</h2>
             <p>Castleford Hedgehog Rescue is committed to saving and nurturing hedgehogs in need. We provide critical care and rehabilitation to ensure their safe return to the wild. Through education and community engagement, we strive to protect these beloved creatures and promote conservation efforts for their future.</p>
           </div>
+          <hr/>
+          <div className="location-info info">
+            <h2>Where are we based?</h2>
+            <p>We are based in Castleford, West Yorkshire. However, our rescue is active across the whole of the yorkshire region. Enabling us to provide much needed help to a much larger number of hedgehogs.</p>
+          </div>
         </div>
       </section>
-      <section className="more-info">
+      <div className="divider">
+        <Image src={YorkshireMap} alt="A map with Yorkshire outlined"/>
+      </div>
+      <section className="social-media">
         <div className="section-content">
-          <div className="question-cards">
-            <div className="question">
-              <h2>Where are we based?</h2>
-              <p>We are based in Castleford, North Yorkshire. However, our rescue is active across the whole of the yorkshire region. Enabling us to provide much needed help to a much larger number of hedgehogs.</p>
-            </div>
-            <div className="question">
-              <h2>Where are we based?</h2>
-              <p>We are based in Castleford, North Yorkshire. However, our rescue is active across the whole of the yorkshire region. Enabling us to provide much needed help to a much larger number of hedgehogs.</p>
-            </div>
-            <div className="question">
-              <h2>Where are we based?</h2>
-              <p>We are based in Castleford, North Yorkshire. However, our rescue is active across the whole of the yorkshire region. Enabling us to provide much needed help to a much larger number of hedgehogs.</p>
-            </div>
-            <div className="question">
-              <h2>Where are we based?</h2>
-              <p>We are based in Castleford, North Yorkshire. However, our rescue is active across the whole of the yorkshire region. Enabling us to provide much needed help to a much larger number of hedgehogs.</p>
-            </div>
-          </div>
         </div>
       </section>
     </main>

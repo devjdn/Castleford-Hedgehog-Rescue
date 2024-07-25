@@ -29,6 +29,7 @@ h1 {
 
 h2 {
   font-weight: 600;
+  line-height: 1.15em;
   font-size: 1.8em;
   color: var(--primary-text);
 }
@@ -45,7 +46,6 @@ p {
 }
 
 body {
-  background: #040404;
   min-height: 100vh;
 }
 
@@ -72,7 +72,7 @@ main {
 .section-content {
   margin-inline: auto;
   max-width: 87.5vw;
-  padding: 2.5vw;
+  padding: 80px 10px;
   gap: 2.5vw;
 }
 
@@ -175,11 +175,21 @@ section.intro .actions .report-options .social-media-links button {
   padding: 10px;
 }
 
+section.mission {
+  background: #000;
+}
 section.mission .section-content {
   gap: 80px;
-  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 108px;
 }
-section.mission .mission-info {
+section.mission hr {
+  border-top: 2px solid #383838;
+  width: 200px;
+  margin-inline: auto;
+}
+section.mission .info {
   max-width: 600px;
   margin-inline: auto;
   display: flex;
@@ -187,14 +197,14 @@ section.mission .mission-info {
   text-align: center;
   gap: 20px;
 }
-section.mission .mission-info h2 {
-  font-size: clamp(1.95em, 3.5vw, 2.5em);
+section.mission .info h2 {
+  font-size: clamp(2.1em, 3.5vw, 2.5em);
   background: linear-gradient(125deg, var(--primary-branding), #12df73);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-section.mission .mission-info p {
+section.mission .info p {
   font-size: clamp(1.1em, 3.5vw, 1.3em);
   font-weight: 600;
   color: #dadada;
@@ -207,44 +217,36 @@ section.mission img {
      object-fit: cover;
 }
 
-section.more-info .question-cards {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.divider {
+  padding: 60px 10px;
+  padding-top: 0;
+  background: #49d334;
+  position: relative;
+  width: 100%;
+}
+.divider img {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 0%);
+  width: 75vw;
+  max-width: 750px;
   margin-inline: auto;
-}
-section.more-info .question {
-  background: #141414;
   border-radius: 20px;
-  padding: 30px;
-}
-section.more-info .question h2 {
-  color: #dedede;
-  margin-bottom: 20px;
-  line-height: 1.15em;
-}
-section.more-info .question p {
-  color: #bcbcbc;
 }
 
 @media screen and (max-width: 868px) {
   .section-content {
-    padding: 2.5vw;
+    padding: 60px 10px;
   }
   section.intro .actions {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-  section.mission .section-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 60px 2.5vw;
-  }
-  section.mission .mission-info {
-    align-items: center;
-    text-align: center;
+  .map-overlap {
+    width: 87.5vw;
   }
 }
 @layer utilities {
