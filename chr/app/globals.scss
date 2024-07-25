@@ -12,7 +12,7 @@
 :root {
   --primary: #f9f9f9;
   --secondary: #fdfdfd;
-  --primary-branding: #5ad800;
+  --primary-branding: #5bdb00;
   --secondary-branding: #3a7906;
 
   --primary-text: #000;
@@ -26,14 +26,14 @@
 
 h1{
   line-height: 1.15em;
-  font-weight: 700;
-  font-size: clamp(2.95em, 3.5vw, 3.5em);
+  font-weight: 600;
+  font-size: clamp(2.75em, 3.5vw, 3em);
   color: #000000;
 }
 h2{
   font-weight: 600;
   line-height: 1.15em;
-  font-size: 1.8em;
+  font-size: clamp(2.1em, 3.5vw, 2.5em);
   color: var(--primary-text);
 }
 h3{
@@ -70,25 +70,11 @@ header.global-header{
   }
 }
 
-main{
-  padding: 0px 0 20px;
-}
-
-.section-content{
-  margin-inline: auto;
-  max-width: 87.5vw;
-  padding: 80px 10px;
-  gap: 2.5vw;
-}
-
 section.intro{
-
-  .section-content{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    max-width: unset;
-    padding: 0;
-  }
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  max-width: unset;
+  padding: 0;
 
   img.hero-image{
     grid-area: 1/1/2/3;
@@ -122,7 +108,7 @@ section.intro{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
-    width: fit-content;
+    max-width: 1000px;
     margin-inline: auto;
 
     .action{
@@ -151,7 +137,7 @@ section.intro{
     p{
       color: #d0d0d0;
     }
-    h2{
+    h3{
       color: #fff;
     }
 
@@ -193,48 +179,16 @@ section.intro{
 
 
 
-section.mission{
-  // background: linear-gradient(to right, #00000050, #000, #00000050), linear-gradient(to bottom, #000 calc(100% - 48px), #00000050), linear-gradient(to right, var(--primary-branding), #12df73);
-  background: #000;
+section.about{
+  // background: #000;
 
   .section-content{
-    gap: 80px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 108px;
-  }
-
-  hr{
-    border-top: 2px solid #383838;
-    width: 200px;
-    margin-inline: auto;
-  }
-
-  .info{
-    max-width: 600px;
-    margin-inline: auto;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-
-    h2{
-      font-size: clamp(2.1em, 3.5vw, 2.5em);
-      background: linear-gradient(125deg, var(--primary-branding), #12df73);
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    p{
-      font-size: clamp(1.1em, 3.5vw, 1.3em);
-      font-weight: 600;
-      color: #dadada
-    }
-
   }
 
   img{
-    border-radius: 20px;
+    border-radius: 10px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -243,35 +197,53 @@ section.mission{
 }
 
 .divider{
-  padding: 60px 10px;
-  padding-top: 0;
+  padding: 10px 10px;
   background: #49d334;
-  position: relative;
   width: 100%;
-  
-  img{
-    position: absolute;
-    top: -60px;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, 0%);
-    width: 75vw;
-    max-width: 750px;
-    margin-inline: auto;
-    border-radius: 20px;
-  }
 }
 
 section.social-media{
+  background: #f3f3f3;
+}
+
+
+
+
+//--------MULTI USE ELEMENTS--------//
+
+.section-content{
+  margin-inline: auto;
+  padding: 60px 0;
+  gap: 60px;
+}
+
+.section-header{
+  padding-inline: calc(50vw - min(1000px, 87.5vw)/2);
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-inline: calc(50vw - min(1000px, 87.5vw)/2);
+
+  >*{
+    max-width: 600px;
+  }
+
+  h2{
+    color: #272727;
+  }
+
+  p{
+    font-size: clamp(1.1em, 3.5vw, 1.3em);
+    font-weight: 600;
+    color: #787878
+  }
 
 }
 
 @media screen and (max-width: 868px){
-
-  .section-content{
-    padding: 60px 10px;
-  }
-
 
   section.intro{
     .actions{
@@ -279,10 +251,6 @@ section.social-media{
       flex-direction: column;
       gap: 20px;
     }
-  }
-
-  .map-overlap{
-    width: 87.5vw;
   }
 
 }
