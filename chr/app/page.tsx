@@ -3,6 +3,7 @@ import HomeHero from "@/branding/hedgehog-hero.jpg"
 import LeftHedgehog from "@/branding/hedgehog-side-1.jpeg";
 import RightHedgehog from "@/branding/hedgehog-side-2.jpg";
 import YorkshireMap from "@/branding/yorkshire-map.png";
+import ScrollContainer from "./components/scroll-container";
 
 export default function Home() {
   return (
@@ -84,9 +85,17 @@ export default function Home() {
       <section className="social-media">
         <div className="section-content">
           <div className="section-header">
-            <h1>Our social media</h1>
+            <h1>Recent social media posts</h1>
           </div>
-          <div className="scrollable">
+          <div className="social-media-posts">
+            <div className="row">
+              <h2>Facebook</h2>
+              <ScrollContainer/>
+            </div>
+            <div className="row">
+              <h2>Instagram</h2>
+              <ScrollContainer/>
+            </div>
           </div>
         </div>
       </section>
